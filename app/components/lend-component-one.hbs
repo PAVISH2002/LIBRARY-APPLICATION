@@ -1,0 +1,38 @@
+<h3>
+    select the books
+</h3>
+
+<div class="m-5">
+    {{#each this.LibraryData.listOfBooks as |oneBook|}}
+    {{#link-to 'lendbook.singlebook' oneBook.name}}{{oneBook.name}}{{/link-to}}
+    {{!-- <LinkTo @route="lendbook.singlebook" @model={{hash name=oneBook.name }}>
+        <button class="btn btn-primary" type="button">
+            {{oneBook.name}}
+        </button>
+    </LinkTo> --}}
+    {{/each}}
+</div>
+
+<div>
+    selectedBooks 
+    {{#each this.LibraryData.cart as |selectedBook|}}
+  
+    <p>{{selectedBook.name}}</p>
+    {{/each}}
+</div>
+
+<h3>
+    select the user
+</h3>
+
+<div id="users" class="m-5">
+    {{#each this.LibraryData.listOfUsers as |oneUser|}}
+    <input type="radio" id={{oneUser.name}} name="users" value={{oneUser.name}}>
+    <label for={{oneUser.name}}> {{oneUser.name}} </label><br>
+    {{/each}}
+</div>
+
+
+<LinkTo @route="index">
+    <button type="button" {{on 'click' this.userselectfun}} >Issue Books</button>
+</LinkTo>

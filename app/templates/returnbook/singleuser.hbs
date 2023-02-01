@@ -1,0 +1,17 @@
+{{page-title "Singleuser"}}
+<h3>name : {{this.model.userObj.name}}</h3>
+<p>address : {{this.model.userObj.address}}</p>
+<p>Date of birth : {{this.model.userObj.DOM}}</p>
+<p>Phone number : {{this.model.userObj.phone_no}}</p>
+
+<p>Books Borrowed :</p>
+{{#each this.model.userObj.borrowedbooks as |book|}}
+<input type="checkbox" id={{book.name}} name="books" value={{book.name}}>
+<label for={{book.name}}> {{book.name}} </label><br>
+{{/each}}
+<LinkTo @route="index">
+    <button type="button" class="btn btn-success" {{on 'click' this.bookReturn}}>
+        Return Books
+    </button>
+</LinkTo>
+{{outlet}}

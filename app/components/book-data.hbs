@@ -1,0 +1,36 @@
+<div class="text-center">
+    <form action="">
+        <div class="m-5">
+            <label for="bookName">Enter the name of the book</label>
+            <input type="text" name="" id="bookName">
+        </div>
+
+        <div class="m-5">
+            <label for="count">Enter the no of copies of the book</label>
+            <input type="number" name="" id="count">
+        </div>
+
+        <div class="m-5">
+            <label for="authorName">Enter the name of the Author</label>
+            <input type="text" name="" id="authorName">
+        </div>
+
+        <div class="m-5">
+            <label for="year">Enter the Year of publication</label>
+            <input type="number" name="" id="year">
+        </div>
+
+        <div class="m-5">
+            <label for="Category">Enter the Category of the book</label>
+            <input type="text" name="" id="Category">
+        </div>
+
+        <div>
+            <LinkTo @route="newbook.bookslist">
+                <button class="btn btn-success" type="button" {{on "click" this.pushTheObject}}>
+                    submit
+                </button>
+            </LinkTo>
+        </div>
+    </form>
+</div>

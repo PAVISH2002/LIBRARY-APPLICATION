@@ -1,0 +1,13 @@
+{{page-title "Singlebook"}}
+<p>{{this.model.bookObject.name}}</p>
+<p>{{this.model.bookObject.copies}}</p>
+<p>{{this.model.bookObject.author}}</p>
+<p>{{this.model.bookObject.year}}</p>
+<p>{{this.model.bookObject.category}}</p>
+
+<LinkTo @route="lendbook">
+    <button class="btn btn-success" type="button" {{on 'click' this.bookselectfun}}>
+        Select book
+    </button>
+</LinkTo>
+{{outlet}}

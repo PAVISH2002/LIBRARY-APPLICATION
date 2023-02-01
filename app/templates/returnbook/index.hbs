@@ -1,0 +1,13 @@
+{{page-title "Index"}}
+
+<h3>Select the user to return the book</h3>
+
+{{#each this.model as |oneUser|}}
+{{#link-to 'returnbook.singleuser' oneUser.name}}{{oneUser.name}}{{/link-to}}
+{{!-- <LinkTo @route="returnbook.singleuser" @model={{hash name = oneUser.name}}>
+    <button class="btn btn-danger m-3" type="button">
+        {{oneUser.name}}
+    </button>
+</LinkTo> --}}
+{{/each}}
+{{outlet}}

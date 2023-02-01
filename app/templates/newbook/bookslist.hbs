@@ -1,0 +1,11 @@
+{{page-title "Booklist"}}
+{{#each this.model as |data|}}
+{{data.name}}
+<br>
+{{/each}}
+<LinkTo @route="index">
+    <button class="btn btn-success" type="button" >
+        Home
+    </button>
+</LinkTo>
+{{outlet}}

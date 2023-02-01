@@ -1,0 +1,8 @@
+<h4>List of books</h4>
+
+<ul>
+    {{#each this.LibraryData.listOfBooks as |book|}}
+    <li>{{book.name}}  :  {{book.copies}}
+    </li> 
+    {{/each}}
+</ul>
